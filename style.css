@@ -12,7 +12,7 @@
 }
 
 body {
-  background: #CBCBCB !important; /* Force grey background with !important */
+  background: #CBCBCB !important; 
   min-height: 100vh;
   overflow-x: hidden;
 }
@@ -24,7 +24,7 @@ header {
     width: 100%;
     padding: 30px 100px;
     display: flex;
-    justify-content: space-between; /* Changed from flex-start */
+    justify-content: space-between; 
     align-items: center;
     z-index: 100;
   }
@@ -33,7 +33,7 @@ header {
     font-size: 2em;
     color: #359381;
     pointer-events: none;
-    margin-right: 0; /* Remove the large right margin */
+    margin-right: 0; 
   }
   
   .navigation {
@@ -65,7 +65,7 @@ header {
   justify-content: center;
   align-items: center;
   height: 100vh;
-  background: #fff !important; /* Keep white background */
+  background: #fff !important; 
   overflow: hidden;
   z-index: 1;
 }
@@ -87,14 +87,12 @@ header {
   z-index: 2;
 }
 
-/* Force About section to be above parallax */
 .grid.grid-1 {
   position: relative;
   z-index: 3;
-  background-color: #CBCBCB; /* Change from transparent to #CBCBCB */
+  background-color: #CBCBCB; 
 }
 
-/* Section structure cleanup */
 .sec {
   position: relative;
   background: #003329;
@@ -113,15 +111,14 @@ header {
   font-weight: 300;
 }
 
-/* About Section Fix */
 #about {
   padding: 4rem 2rem;
-  background-color: #CBCBCB !important; /* Force grey background */
+  background-color: #CBCBCB !important; 
   color: #000;
   width: 100%;
   margin: 0;
   position: relative;
-  z-index: 10; /* Higher z-index to ensure it displays above other elements */
+  z-index: 10;
 }
 
 .about-gallery {
@@ -140,7 +137,7 @@ header {
 }
 
 #about * {
-  background-color: inherit; /* Inherit the parent's background color */
+  background-color: inherit; 
 }
 
 /* Section 2 */
@@ -164,7 +161,7 @@ main {
   width: min(1400px, 100vw);
   margin: auto;
   padding: 20px;
-  background-color: transparent !important; /* Force transparency */
+  background-color: transparent !important; 
 }
 header{
     display: flex;
@@ -216,7 +213,7 @@ header img{
     grid-template-rows: repeat(var(--row), 100px);
     margin-top: 50px;
     gap: 50px;
-    background-color: transparent; /* Ensure grid has transparent background */
+    background-color: transparent;
 }
 .grid-1 figure:nth-child(1){
     grid-column: 2 / 6;
@@ -232,7 +229,7 @@ header img{
     text-align: center;
     grid-row: 1;       
     z-index: 1;
-    background-color: transparent; /* Ensure transparency */
+    background-color: transparent; 
 } 
 .grid-1{
     --row: 2;
@@ -242,8 +239,8 @@ header img{
   display: grid;
   grid-template-columns: repeat(6, 1fr);
   grid-template-rows: repeat(4, auto);
-  gap: 30px; /* Reduced from 50px */
-  margin-top: 20px; /* Reduced from 50px */
+  gap: 30px; 
+  margin-top: 20px; 
   background-color: transparent;
 }
 
@@ -253,7 +250,7 @@ header img{
     flex-direction: row-reverse;
     align-items: flex-start;
     justify-content: space-between;
-    background-color: transparent; /* Ensure transparency */
+    background-color: transparent; 
 }
 
 .grid-2 .autoShow:nth-child(1) { grid-row: 1; }
@@ -296,12 +293,12 @@ header img{
 .grid-3{
     --row: 6;
     font-size: 10em;
-    background-color: transparent; /* Ensure transparency */
+    background-color: transparent;
 }
 .grid-3 div{
     grid-column: 2/ 6;
     text-wrap: nowrap;
-    background-color: transparent; /* Ensure transparency */
+    background-color: transparent;
 }
 .grid-3 div:nth-child(even){
     text-align: right;
@@ -314,7 +311,7 @@ header img{
 }
 footer {
     border-top: 1px solid #2E373A55;
-    padding: 100px 0; /* adjust as needed */
+    padding: 100px 0; 
 }
 
 @media screen and (max-width: 1023px){
@@ -386,7 +383,7 @@ footer {
 .autoShow{
     animation: autoShowAnimation both;
     animation-timeline: view(70% 5%);
-    background-color: transparent; /* Ensure transparency */
+    background-color: transparent;
 }
 @keyframes autoShowAnimation{
     from{
@@ -415,12 +412,11 @@ footer {
 
 
 /* Section 3 */
-/* Scope everything to .section-two */
 
 .section-two {
   background-color: #CBCBCB;
-  position: relative; /* Add this */
-  z-index: 0; /* Optional: helps keep layering clean */
+  position: relative; 
+  z-index: 0; 
 }
 
 .section-two .banner {
@@ -430,7 +426,6 @@ footer {
   overflow: hidden;
   position: relative;
 }
-
 
 .section-two .banner .slider {
     position: absolute;
@@ -509,7 +504,6 @@ footer {
     font-size: 3em;
 }
 
-/* Responsive tweaks */
 @media screen and (max-width: 1023px) {
     .section-two .banner .slider {
         width: 160px;
@@ -577,8 +571,7 @@ html, body {
     width: min(1400px, 100vw);
     margin: auto;
   }
-  
-  /* Grid 1: Centered Title */
+
   .location-wrapper .grid-3 {
     --row: 2;
     display: grid;
@@ -597,7 +590,6 @@ html, body {
     font-family: 'Odibee Sans', cursive;
   }
   
-  /* Grid 2: Map + Address Layout */
   .location-wrapper .grid-4 {
     display: grid;
     grid-template-columns: repeat(6, 1fr);
@@ -649,7 +641,6 @@ html, body {
     line-height: 1.4em;
   }
   
-  /* Responsive Layout */
   @media screen and (max-width: 1023px) {
     .location-wrapper .grid-3 h2 {
       font-size: 2.5em;
@@ -689,7 +680,6 @@ html, body {
     }
   }
   
-  /* Animation */
   .location-wrapper .autoShow {
     animation: autoShowAnimation both;
     animation-timeline: view(70% 5%);
@@ -706,7 +696,6 @@ html, body {
     }
   }
   
-  /* SECTION NAVIGATION BAR */
   .section-nav {
     position: sticky;
     top: 0;
@@ -804,12 +793,8 @@ html, body {
     --section-padding: 60px;
     --main-color: #10cab7;
     --secondary-color: #2c4755;
-    /* About section background color */
     --about-bg: #CBCBCB;
   }
-  
-  /* About Section Background - Remove conflicting rule */
-  /* This conflicting rule has been removed and consolidated above */
     
   body {
     margin: 0;
@@ -831,7 +816,6 @@ html, body {
     background-color: white;
   }
     
-  /* Watermark Style Heading */
   .special-heading {
     text-align: center;
     font-size: 100px;
