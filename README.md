@@ -76,4 +76,4 @@ To customize the site for a different property:
 - Virtual tour feature
 
 ## Credits
-- Design & Development: [Sarthak Dewanda]
+- Design & Development: Sarthak Dewanda
