@@ -1,5 +1,7 @@
 # Mountain Villa Vacation Home Website
 
+**[View Live Website](https://67f94da50413b908173cbbc6--the-cozy-nest.netlify.app/)**
+
 ## Overview
 This repository contains the code for a luxury vacation home website showcasing a mountain villa getaway. The site features a modern, parallax-scrolling design with sections highlighting different areas of the property, location information, and contact details.
 
