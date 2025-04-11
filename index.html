@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>The Cozy Nest</title>
+
+  <!-- Original & Additional Styles -->
+  <link rel="stylesheet" href="style.css" />
+
+  <!-- GSAP -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.7/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.7/ScrollTrigger.min.js"></script>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background-color: #fff;
+      font-family: sans-serif;
+    }
+
+    .section-two {
+      position: relative;
+      z-index: 0;
+    }
+
+    .section-two::before {
+      content: '';
+      position: absolute;
+      width: min(1400px, 90vw);
+      top: 10%;
+      left: 50%;
+      height: 90%;
+      transform: translateX(-50%);
+      background-image: url(images/bg.png);
+      background-size: 100%;
+      background-repeat: no-repeat;
+      background-position: top center;
+      pointer-events: none;
+      z-index: -1;
+    }
+
+    .location iframe {
+      width: 100%;
+      height: 100%;
+      border: 0;
+    }
+
+    .location figure {
+      width: 100%;
+      max-width: 600px;
+      height: 300px;
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 30px 100px;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 100;
+    }
+
+    .navigation {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      flex-grow: 1;
+    }
+
+    .logo {
+      font-size: 2em;
+      color: #359381;
+      pointer-events: none;
+      margin-right: auto;
+    }
+
+    .navigation a {
+      text-decoration: none;
+      color: #359381;
+      padding: 6px 15px;
+      border-radius: 20px;
+      font-weight: 600;
+    }
+
+    .navigation a:hover,
+    .navigation a.active {
+      background: #359381;
+      color: #fff;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <h2 class="logo">The Cozy Nest</h2>
+    <nav class="navigation">
+      <a href="#home" class="active">Home</a>
+      <a href="#about">About</a>
+      <a href="#location">Location</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <!-- Parallax Section -->
+  <section class="parallax" id="home">
+    <img src="images/hill1.png" id="hill1">
+    <img src="images/hill2.png" id="hill2">
+    <img src="images/hill3.png" id="hill3">
+    <img src="images/hill4.png" id="hill4">
+    <img src="images/hill5.png" id="hill5">
+    <img src="images/tree.png" id="tree">
+    <h2 id="text">The Cozy Nest</h2>
+    <img src="images/leaf.png" id="leaf">
+    <img src="images/plant.png" id="plant">
+  </section>
+
+  <main>
+    <!-- About Section -->
+    <section class="grid grid-1" id="about">
+      <h2 class="autoShow">About</h2>
+    </section>
+
+    <section class="grid grid-2">
+      <div class="autoShow">
+        <figure><img src="images/bedroom.png" alt="Bedroom"></figure>
+        <div>
+          <p>Bedroom</p>
+          <p class="desc">Charming and cozy bedroom, perfect for a restful stay in a welcoming home.</p>
+        </div>
+      </div>
+
+      <div class="autoShow">
+        <div>
+          <p>Living Room</p>
+          <p class="desc">Spacious and inviting living room, ideal for relaxing or entertaining guests in comfort.</p>
+        </div>
+        <figure><img src="images/living_room.png" alt="Living Room"></figure>
+      </div>
+
+      <div class="autoShow">
+        <figure><img src="images/bathroom.png" alt="Bathroom"></figure>
+        <div>
+          <p>Bathroom</p>
+          <p class="desc">Modern and clean bathroom with all the essentials for a refreshing and relaxing experience.</p>
+        </div>
+      </div>
+
+      <div class="autoShow">
+        <div>
+          <p>Lake View</p>
+          <p class="desc">Stunning lake view, offering a peaceful and scenic backdrop for your stay.</p>
+        </div>
+        <figure><img src="images/lake_view.png" alt="Lake View"></figure>
+      </div>
+    </section>
+
+    <section class="grid grid-3">
+      <div class="autoBLur">SKYLINE VIEW</div>
+      <div class="autoBLur">WATERFRONT</div>
+      <div class="autoBLur">PATIO</div>
+      <div class="autoBLur">BREAKFAST</div>
+      <div class="autoBLur">FREE WIFI</div>
+    </section>
+  </main>
+
+  <!-- Rotating Banner Section -->
+  <div class="section-two">
+    <div class="banner">
+      <div class="slider" style="--quantity: 10">
+        <div class="item" style="--position: 1"><img src="images/rotation/1.png" alt=""></div>
+        <div class="item" style="--position: 2"><img src="images/rotation/2.png" alt=""></div>
+        <div class="item" style="--position: 3"><img src="images/rotation/3.png" alt=""></div>
+        <div class="item" style="--position: 4"><img src="images/rotation/4.png" alt=""></div>
+        <div class="item" style="--position: 5"><img src="images/rotation/5.png" alt=""></div>
+        <div class="item" style="--position: 6"><img src="images/rotation/6.png" alt=""></div>
+        <div class="item" style="--position: 7"><img src="images/rotation/7.png" alt=""></div>
+        <div class="item" style="--position: 8"><img src="images/rotation/8.png" alt=""></div>
+        <div class="item" style="--position: 9"><img src="images/rotation/9.png" alt=""></div>
+        <div class="item" style="--position: 10"><img src="images/rotation/10.png" alt=""></div>
+      </div>
+      <div class="content">
+        <h1 data-content="Reviews">Reviews</h1>
+      </div>
+    </div>
+  </div>
+
+  <!-- Location Section -->
+  <div class="location-wrapper" id="location">
+    <section class="grid grid-3">
+      <h2 class="autoShow">Location</h2>
+    </section>
+
+    <section class="grid grid-4">
+      <div class="autoShow">
+        <figure>
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3168.736282602814!2d-122.08560868469212!3d37.42199997982533!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x808fba6b6f3aaf3d%3A0x2b1c8e1d7a4a9e1!2s1600+Amphitheatre+Parkway%2C+Mountain+View%2C+CA+94043%2C+USA!5e0!3m2!1sen!2sus!4v1610000000000!5m2!1sen!2sus"
+            allowfullscreen="" loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade">
+          </iframe>
+        </figure>
+        <div>
+          <p>The Cozy Nest</p>
+          <p class="desc">1600 Amphitheatre Parkway, Mountain View, USA</p>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <!-- Contact Section -->
+  <div class="contact" id="contact">
+    <div class="container">
+      <h2 class="special-heading">Contact</h2>
+      <p>We don’t just write code — we craft the future.</p>
+      <div class="info">
+        <p class="label">Feel free to drop me a line at:</p>
+        <a href="mailto:sarthakdewanda1765@gmail.com" class="link">sarthakdewanda1765@gmail.com</a>
+        <div class="social">
+          Find Us On Social Networks
+          <a href="https://github.com/" target="_blank">
+            <img src="images/github.png" alt="GitHub" class="social-icon">
+          </a>
+          <a href="https://www.linkedin.com/" target="_blank">
+            <img src="images/linkdin.png" alt="LinkedIn" class="social-icon">
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <div class="footer">
+    &copy; 2025 <span>Sarthak</span> All Right Reserved
+  </div>
+
+  <script src="script.js"></script>
+</body>
+<script src="https://cdn.botpress.cloud/webchat/v2.3/inject.js"></script>
+<script src="https://files.bpcontent.cloud/2025/04/09/13/20250409135612-8ZXGIRD6.js"></script>
+</html>
