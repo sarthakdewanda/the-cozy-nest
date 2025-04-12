@@ -4,6 +4,7 @@
 @import url('https://fonts.cdnfonts.com/css/poppins');
 @import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Odibee+Sans&display=swap');
 
+/* General reset for padding and margins */
 * {
   margin: 0;
   padding: 0;
@@ -18,45 +19,46 @@ body {
 }
 
 header {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    padding: 30px 100px;
-    display: flex;
-    justify-content: space-between; /* Changed from flex-start */
-    align-items: center;
-    z-index: 100;
-  }
-  
-  .logo {
-    font-size: 2em;
-    color: #359381;
-    pointer-events: none;
-    margin-right: 0; /* Remove the large right margin */
-  }
-  
-  .navigation {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 20px;
-    flex: 1;
-  }
-  
-  .navigation a {
-    text-decoration: none;
-    color: #359381;
-    padding: 6px 15px;
-    border-radius: 20px;
-    font-weight: 600;
-  }
-  
-  .navigation a:hover,
-  .navigation a.active {
-    background: #359381;
-    color: #fff;
-  }
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 100;
+  background-color: transparent; /* Ensure no background here */
+}
+
+.logo {
+  font-size: 2em;
+  color: #359381;
+  pointer-events: none;
+  margin-right: 0; /* Remove large right margin */
+}
+
+.navigation {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  flex: 1;
+}
+
+.navigation a {
+  text-decoration: none;
+  color: #359381;
+  padding: 6px 15px;
+  border-radius: 20px;
+  font-weight: 600;
+}
+
+.navigation a:hover,
+.navigation a.active {
+  background: #359381;
+  color: #fff;
+}
 
 /* Parallax Section Fixes */
 .parallax {
@@ -68,6 +70,7 @@ header {
   background: #fff !important; /* Keep white background */
   overflow: hidden;
   z-index: 1;
+  margin-top: -20px; /* Push the parallax section up */
 }
 
 .parallax img {
@@ -93,7 +96,6 @@ header {
   width: auto;
   padding: 0;
 }
-
 
 /* Force About section to be above parallax */
 .grid.grid-1 {
@@ -127,50 +129,38 @@ header {
   #leaf {
     display: none;
   }
+
   header {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: center; /* Center items horizontally */
     align-items: center;
     width: 100%;
     padding: 20px;
   }
-  
+
   .logo {
-    order: 1;
+    font-size: 2em;
+    color: #359381;
+    pointer-events: none;
     margin: 0;
+    order: 1;
+    flex-shrink: 0;
+    /* Center the logo in the header */
+    margin-left: auto;
+    margin-right: auto;
   }
 
-  
-  /* Hamburger menu */
+  /* Hide the hamburger menu */
   .hamburger {
-    order: 2;
-    margin-left: auto;
-    border: 2px solid #359381;
-    border-radius: 4px;
-    padding: 4px;
-    cursor: pointer;
-    z-index: 110;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    width: 30px;
-    height: 24px;
+    display: none;
   }
-  
-  .hamburger span {
-    display: block;
-    width: 100%;
-    height: 3px;
-    background: #359381;
-    border-radius: 2px;
-  }
-  
+
   /* Mobile navigation menu */
   .navigation {
     display: none !important;
   }
-  
+
   .navigation.mobile {
     display: flex;
     flex-direction: column;
@@ -185,9 +175,8 @@ header {
     box-shadow: 0 2px 6px rgba(0,0,0,0.15);
     z-index: 100;
     width: 200px;
-    display: none !important;
   }
-  
+
   .navigation.mobile a {
     color: #359381;
     background: transparent;
@@ -196,22 +185,22 @@ header {
     width: 100%;
     text-align: center;
   }
-  
+
   .navigation.mobile a:hover,
   .navigation.mobile a.active {
     background: #359381;
     color: #fff;
   }
-  
-  /* Parallax section fixes */
+
+  /* Parallax section fixes for mobile */
   .parallax {
     height: 100vh;
-    margin-top: 0; /* Reset negative margin */
-    margin-bottom: 0; /* Reset compensating margin */
+    margin-top: -30px; /* Push the parallax section up more in mobile */
+    margin-bottom: 0;
     overflow: hidden;
     position: relative;
   }
-  
+
   .parallax img {
     position: absolute;
     width: 100%;
@@ -221,13 +210,13 @@ header {
     top: 0;
     left: 0;
   }
-  
+
   /* Specific element positioning */
   #hill1, #hill2, #hill3, #hill4, #hill5 {
     width: 100%;
     object-fit: cover;
   }
-  
+
   #tree {
     width: 100%;
     height: auto;
@@ -236,7 +225,7 @@ header {
     object-fit: contain;
     object-position: bottom center;
   }
-  
+
   #plant {
     width: 100%;
     height: auto;
@@ -246,13 +235,13 @@ header {
     object-fit: contain;
     object-position: bottom center;
   }
-  
+
   #leaf {
     width: 25%;
     height: auto;
     object-fit: contain;
   }
-  
+
   #text {
     font-size: 2.5em;
     color: #FF6B6B;
@@ -263,12 +252,11 @@ header {
     transform: translate(-50%, -50%);
     text-align: center;
     white-space: nowrap;
-    width: auto; /* 👈 prevent full-width which can mess with centering */
-    padding: 0;  /* 👈 remove horizontal padding */
+    width: auto;
+    padding: 0;
     z-index: 5;
   }
-  
-  
+
   /* Performance optimizations */
   .parallax img, #text, #leaf {
     will-change: transform;
@@ -276,6 +264,7 @@ header {
     transform-style: preserve-3d;
   }
 }
+
 
 
 
